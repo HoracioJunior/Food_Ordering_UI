@@ -1,16 +1,13 @@
-# food_ordering
+# FOOD ORDERING USER INTERFACE APP PROJECT
 
-A new Flutter project.
+Esse projecto apresenta um UI de aplicativo para ordem de refeicoes desenvolvido usando Framework Flutter e Dart.
+Flutter um um framework que vem revolucionar o mercado na area de desenvolvimento de aplicativos moveis tendo como uma vantagem um desenvolvimento agil e cross-plataform ou seja Um codigo serve para duas plataformas diferentes(Android e IOS).
 
-## Getting Started
+# Algumas imagens daquilo que ja foi desenvolvido
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
