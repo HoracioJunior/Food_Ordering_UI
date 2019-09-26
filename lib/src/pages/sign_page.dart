@@ -139,7 +139,7 @@ class _SignInPageState extends State<SignInPage> {
                          child: Text("Iniciar Sessão".toUpperCase(),
                          style: TextStyle(
                            color: Colors.white,
-                           fontSize: 21,
+                           fontSize: 20,
                            fontWeight: FontWeight.bold,
                          ),
                          ),
