@@ -8,6 +8,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  bool _toggleVisibility = true;
+  bool _toggleConfirmVisibility = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,10 +55,11 @@ class _SignInPageState extends State<SignInPage> {
                 ],
               ),
             ),
+            //SizedBox(height: 10),
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height/2.0,
-              padding: EdgeInsets.only(top: 62),
+              padding: EdgeInsets.only(top: 40),
               child: Column(
                 children: <Widget>[
                   Container(
@@ -100,11 +103,24 @@ class _SignInPageState extends State<SignInPage> {
                         border: InputBorder.none,
                         icon: Icon(Icons.vpn_key, color: Colors.grey,),
                         hintText: "Senha do Usuario",
+                        suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                _toggleVisibility = !_toggleVisibility;
+                              });
+                            },
+                            icon: _toggleVisibility
+                                ? Icon(Icons.visibility_off)
+                                : Icon(Icons.visibility),
+                          ),
                       ),
+                       obscureText: _toggleVisibility,
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){},
+                  onTap: (){
+                    //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => SignUpPage()));
+                  },
                       child: Align(
                       alignment: Alignment.bottomRight,
                       child: Padding(
@@ -150,6 +166,7 @@ class _SignInPageState extends State<SignInPage> {
                 ],
               ),
             ),
+            //Row(//Vai conter Os icons de Gmail, Facebook e uma descricao),
           ],
         ),
         ),

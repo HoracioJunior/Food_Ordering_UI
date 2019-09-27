@@ -96,9 +96,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
-              height: 50.0,
-            ),
+            SizedBox(height: 50.0,),
             Card(
               elevation: 5.0,
               child: Padding(
