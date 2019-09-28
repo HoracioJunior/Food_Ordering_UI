@@ -9,7 +9,7 @@ class App extends StatelessWidget{
        debugShowCheckedModeBanner: false,
        title: "Food Ordering",
        theme: ThemeData(
-         primaryColor: Colors.blueAccent
+         primaryColor: Colors.deepOrange
        ),
        home: MainScreen(),
      );

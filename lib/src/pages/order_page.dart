@@ -15,7 +15,7 @@ class _OrderPageState extends State<OrderPage> {
         title: Text(
           "Seu Carrinho de Compras",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.deepOrange,
           ),
         ),
         backgroundColor: Colors.white,
@@ -124,16 +124,16 @@ class _OrderPageState extends State<OrderPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                "Cart Total",
+                "Total a Pagar",
                 style: TextStyle(
-                    color: Color(0xFF9BA7C6),
+                    color: Colors.deepOrange,
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                "26.5",
+                "MZN 26.5",
                 style: TextStyle(
-                    color: Color(0xFF6C6D6D),
+                    color: Colors.deepOrange,
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold),
               ),

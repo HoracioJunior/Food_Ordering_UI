@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeTopInfo extends StatelessWidget {
-  final textstyle = TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold);
+  final textstyle = TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.deepOrange);
   @override
   Widget build(BuildContext context){
     return Container(
@@ -17,7 +17,7 @@ class HomeTopInfo extends StatelessWidget {
                     Text("Faça o teu pedido!", style: textstyle)
                           ],
                       ),
-                    Icon(Icons.notifications_none, size: 40.0, color: Theme.of(context).primaryColor),
+                    Icon(Icons.notifications_none, size: 40.0, color: Colors.blueAccent),
                   ],
                 ),
     );

@@ -81,10 +81,18 @@ class _BoughtFoodsState extends State<BoughtFoods>{
                 ),
                 Column(
                   children: <Widget>[
+                    Icon(Icons.add_shopping_cart,
+                    color:Colors.white,
+                    size: 30.0
+                    ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
                     Text(
                       widget.price.toString(),
                       style: TextStyle(
-                        color: Colors.orangeAccent,
+                        color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0
                       ),

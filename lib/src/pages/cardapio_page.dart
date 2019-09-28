@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class FavoritePage extends StatefulWidget{
+class CardapioPage extends StatefulWidget{
   @override
-  _FavoritePageState createState() => _FavoritePageState();
+  _CardapioPageState createState() => _CardapioPageState();
 }
 
-class _FavoritePageState extends State<FavoritePage>{
+class _CardapioPageState extends State<CardapioPage>{
   @override
   Widget build(BuildContext context){
     return Center(

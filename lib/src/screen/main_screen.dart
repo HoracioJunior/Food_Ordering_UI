@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+//import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import '../pages/home_page.dart';
 import '../pages/order_page.dart';
 import '../pages/profile_page.dart';
-import '../pages/favorite_page.dart';
+import '../pages/cardapio_page.dart';
 
 class MainScreen extends StatefulWidget{
   @override
@@ -10,7 +11,6 @@ class MainScreen extends StatefulWidget{
   }
   
   class _MainScreenState extends State<MainScreen> {
-
     int currentTabIndex=0;
     List<Widget> pages;
     Widget currentPage;
@@ -18,7 +18,7 @@ class MainScreen extends StatefulWidget{
     HomePage homePage;
     OrderPage  orderPage;
     ProfilePage profilePage;
-    FavoritePage favoritePage;
+    CardapioPage cardapioPage;
 
     @override
     void initState(){
@@ -26,15 +26,15 @@ class MainScreen extends StatefulWidget{
       homePage= HomePage();
       orderPage = OrderPage();
       profilePage = ProfilePage();
-      favoritePage = FavoritePage();
-      pages = [homePage,orderPage, favoritePage, profilePage];
+      cardapioPage = CardapioPage();
+      pages = [homePage, cardapioPage,orderPage, profilePage];
 
       currentPage = homePage;
     }
 
   @override
   Widget build(BuildContext context) {
-    
+
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         onTap: (int index){
@@ -49,24 +49,23 @@ class MainScreen extends StatefulWidget{
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text("Home")
+            title: Text("Inicio")
           ),
-               BottomNavigationBarItem(
+          BottomNavigationBarItem(
+            icon: Icon(Icons.fastfood),
+            title: Text("Cardapio")
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
-            title: Text("Cart")
+            title: Text("Carrinho")
           ),
-               BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            title: Text("Favorite")
-          ),
-               BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text("Profile")
+            title: Text("Perfil")
           ),
         ],
       ),
       body: currentPage,
     );
   }
-    
   }

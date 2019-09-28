@@ -16,7 +16,7 @@ class SearchField extends StatelessWidget {
             borderRadius: BorderRadius.circular(30.0), 
             child: Icon(
               Icons.search,
-              color: Colors.black,
+              color: Colors.deepOrange,
               ),
           ), 
           border: InputBorder.none,

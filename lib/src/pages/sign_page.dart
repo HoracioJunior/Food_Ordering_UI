@@ -18,17 +18,20 @@ class _SignInPageState extends State<SignInPage> {
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height/2.5,
+              height: MediaQuery.of(context).size.height/3,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Color(0xFFf45d27),
-                    Color(0xFFf5851f)
+                    Colors.deepOrange,
+                    Colors.deepOrangeAccent,
                   ],
                 ),
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90))
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(65),
+                  bottomRight: Radius.circular(65)
+                )
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -36,18 +39,19 @@ class _SignInPageState extends State<SignInPage> {
                   Spacer(),
                  Align(
                    alignment: Alignment.center,
-                    child: Icon(Icons.person, size: 90, color: Colors.white,),
+                    child: Icon(Icons.fastfood, size: 90, color: Colors.white,),
                  ),
                  Spacer(),
+                 //SizedBox(height: 20,),
                  Align(
-                   alignment: Alignment.bottomRight,
+                   alignment: Alignment.center,
                    child: Padding(
-                     padding: const EdgeInsets.only(right: 32, bottom: 32),
+                     padding: const EdgeInsets.only(right: 32, bottom: 32, left: 32),
                      child: Text("Iniciar Sessão",
                      style: TextStyle(
-                       fontSize: 20.0,
+                       fontSize: 25.0,
                        fontWeight: FontWeight.bold,
-                       color: Colors.white
+                       color: Colors.white,
                      ),
                      ),
                    ),
@@ -146,8 +150,8 @@ class _SignInPageState extends State<SignInPage> {
                        decoration: BoxDecoration(
                          gradient: LinearGradient(
                            colors: [
-                              Color(0xFFf45d27),
-                              Color(0xFFf5851f)
+                            Colors.deepOrange,
+                            Colors.deepOrangeAccent,
                             ],
                           ),
                           borderRadius: BorderRadius.circular(50)

@@ -41,7 +41,7 @@ class HomePage extends StatefulWidget{
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.orangeAccent
+                      color: Colors.deepOrange
                     ),
                     ),
                   ),

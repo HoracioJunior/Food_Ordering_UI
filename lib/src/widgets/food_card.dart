@@ -28,6 +28,7 @@ class FoodCard extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(categoryName, style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
+                //Icon(Icons.add_shopping_cart),
                 Text("$numberOfItems Min")
               ],
             ),
