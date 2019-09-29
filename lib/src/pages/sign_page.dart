@@ -123,7 +123,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   GestureDetector(
                   onTap: (){
-                    //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => SignUpPage()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => SignUpPage()));
                   },
                       child: Align(
                       alignment: Alignment.bottomRight,
@@ -170,7 +170,20 @@ class _SignInPageState extends State<SignInPage> {
                 ],
               ),
             ),
-            //Row(//Vai conter Os icons de Gmail, Facebook e uma descricao),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                IconButton(
+                icon: new Icon(FontAwesomeIcons.facebook), 
+                onPressed: () { print("Pressed"); }
+                ),
+                 IconButton(
+                   icon: new Icon(FontAwesomeIcons.google), 
+                onPressed: () { print("Pressed"); }
+                ),
+              
+              ],
+            ),
           ],
         ),
         ),

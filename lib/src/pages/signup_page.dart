@@ -83,93 +83,232 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "Cadastrar-se",
-              style: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 50.0,),
-            Card(
-              elevation: 5.0,
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
+      
+      body: Container(
+        child: SingleChildScrollView(
+                  child: Column(
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height/3.5,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.deepOrange,
+                      Colors.deepOrangeAccent,
+                    ],
+                  ),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(65),
+                    bottomRight: Radius.circular(65),
+                    
+                  )
+                ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    _buildUsernameTextField(),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    _buildEmailTextField(),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    _buildPasswordTextField(),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    _buildConfirmPasswordTextField(),
+                    Spacer(),
+                   Align(
+                     alignment: Alignment.center,
+                      child: Icon(Icons.fastfood, size: 80, color: Colors.white,),
+                   ),
+                   Spacer(),
+                   //SizedBox(height: 20,),
+                   Align(
+                     alignment: Alignment.center,
+                     child: Padding(
+                       padding: const EdgeInsets.only(right: 32, bottom: 32, left: 32),
+                       child: Text("Cadastrar-se",
+                       style: TextStyle(
+                         fontSize: 25.0,
+                         fontWeight: FontWeight.bold,
+                         color: Colors.white,
+                       ),
+                       ),
+                     ),
+                     ),
                   ],
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            Container(
-              height: 50.0,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(25.0)),
-              child: Center(
-                child: Text(
-                  "Cadastrar-se",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+              SizedBox(height: 25),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height/1.5,
+                //padding: EdgeInsets.only(top: 50),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      width: MediaQuery.of(context).size.width/1.2,
+                      height: 50,
+                      padding: EdgeInsets.only(top: 4,bottom: 4,left: 16,right: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(color: Colors.black26, blurRadius: 10.0)
+                        ],
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          icon: Icon(Icons.email, color: Colors.grey,),
+                          hintText: "Email do Usuário",
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 25,),
+                    Container(
+                      width: MediaQuery.of(context).size.width/1.2,
+                      height: 50,
+                      padding: EdgeInsets.only(top: 4,bottom: 4,left: 16,right: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(color: Colors.black26, blurRadius: 10.0)
+                        ],
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          icon: Icon(Icons.person, color: Colors.grey,),
+                          hintText: "Nome do usuario",
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 25,),
+                    Container(
+                      width: MediaQuery.of(context).size.width/1.2,
+                      height: 50,
+                      padding: EdgeInsets.only(
+                        top: 4,
+                        bottom: 4,
+                        left: 16,
+                        right: 16
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(color: Colors.black26, blurRadius: 10.0)
+                        ],
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          icon: Icon(Icons.vpn_key, color: Colors.grey,),
+                          hintText: "Senha do Usuario",
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _toggleVisibility = !_toggleVisibility;
+                                });
+                              },
+                              icon: _toggleVisibility
+                                  ? Icon(Icons.visibility_off)
+                                  : Icon(Icons.visibility),
+                            ),
+                        ),
+                         obscureText: _toggleVisibility,
+                      ),
+                    ),
+                    SizedBox(height: 25,),
+                    Container(
+                      width: MediaQuery.of(context).size.width/1.2,
+                      height: 50,
+                      padding: EdgeInsets.only(
+                        top: 4,
+                        bottom: 4,
+                        left: 16,
+                        right: 16
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(color: Colors.black26, blurRadius: 10.0)
+                        ],
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          icon: Icon(Icons.vpn_key, color: Colors.grey,),
+                          hintText: "Confirmar senha do usuario",
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _toggleVisibility = !_toggleVisibility;
+                                });
+                              },
+                              icon: _toggleVisibility
+                                  ? Icon(Icons.visibility_off)
+                                  : Icon(Icons.visibility),
+                            ),
+                        ),
+                         obscureText: _toggleVisibility,
+                      ),
+                    ),
+                    SizedBox(height: 20,),
+                    GestureDetector(
+                      onTap: (){},
+                     child: Container(
+                        height: 50,
+                         width: MediaQuery.of(context).size.width/1.2,
+                         decoration: BoxDecoration(
+                           gradient: LinearGradient(
+                             colors: [
+                              Colors.deepOrange,
+                              Colors.deepOrangeAccent,
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(50)
+                         ),
+                         child: Center(
+                           child: Text("Cadastrar-se".toUpperCase(),
+                           style: TextStyle(
+                             color: Colors.white,
+                             fontSize: 20,
+                             fontWeight: FontWeight.bold,
+                           ),
+                           ),
+                         ),
+                      ),
+                    ),
+                    Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                            GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => SignInPage()));
+                          },
+                          child: Align(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              top: 16,
+                            ),
+                            child: Text("Já tens Conta? Iniciar Sessão AQUI",
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blueAccent
+                            ),
+                            ),
+                          ),
+                        ),
+                      ),
+                        
+                      ],
+                    ),
+                  ],
                 ),
               ),
-            ),
-            Divider(
-              height: 20.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "Já tens uma conta?",
-                  style: TextStyle(
-                      color: Color(0xFFBDC2CB),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18.0),
-                ),
-                SizedBox(width: 10.0),
-                GestureDetector(
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => SignInPage()));
-                  },
-                  child: Text(
-                    "Iniciar Sessão",
-                    style: TextStyle(
-                        color: Colors.blueAccent,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18.0),
-                  ),
-                ),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
+        ),
     );
   }
 }
