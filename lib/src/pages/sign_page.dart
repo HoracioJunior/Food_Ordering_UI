@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'signup_page.dart';
 
 class SignInPage extends StatefulWidget {
@@ -8,6 +9,7 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+
   bool _toggleVisibility = true;
   bool _toggleConfirmVisibility = true;
   @override
@@ -173,14 +175,24 @@ class _SignInPageState extends State<SignInPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                IconButton(
+                
+                GoogleSignInButton(
+                  onPressed: () {}, 
+                  darkMode: true,
+                  text: "Google",
+                ),
+                FacebookSignInButton(
+                  onPressed: () {},
+                  text: "Facebook",
+                ),
+                /*IconButton(
                 icon: new Icon(FontAwesomeIcons.facebook), 
                 onPressed: () { print("Pressed"); }
                 ),
                  IconButton(
                    icon: new Icon(FontAwesomeIcons.google), 
                 onPressed: () { print("Pressed"); }
-                ),
+                ),*/
               
               ],
             ),

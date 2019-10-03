@@ -7,6 +7,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+
   bool _toggleVisibility = true;
   bool _toggleConfirmVisibility = true;
 

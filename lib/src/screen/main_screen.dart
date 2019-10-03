@@ -52,7 +52,7 @@ class MainScreen extends StatefulWidget{
             title: Text("Inicio")
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.fastfood),
+            icon: Icon(Icons.restaurant_menu),
             title: Text("Cardapio")
           ),
           BottomNavigationBarItem(

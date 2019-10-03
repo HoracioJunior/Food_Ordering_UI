@@ -11,6 +11,14 @@ class SearchField extends StatelessWidget {
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(horizontal:32.0, vertical: 14.0),
           hintText: "pesquise aqui...",
+          prefixIcon:Material(
+             //elevation: 5.0,
+            borderRadius: BorderRadius.circular(30.0), 
+            child: Icon(
+              Icons.filter_list,
+              color: Colors.deepOrange,
+              )
+          ) ,
           suffixIcon: Material(
             elevation: 5.0,
             borderRadius: BorderRadius.circular(30.0), 

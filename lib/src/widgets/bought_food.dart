@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class BoughtFoods extends StatefulWidget {
   final String name;
@@ -63,12 +64,22 @@ class _BoughtFoodsState extends State<BoughtFoods>{
                     ),
                     Row(
                       children: <Widget>[
+                        /*Icon(Icons.star, color:Theme.of(context).primaryColor, size: 16.0),
                         Icon(Icons.star, color:Theme.of(context).primaryColor, size: 16.0),
                         Icon(Icons.star, color:Theme.of(context).primaryColor, size: 16.0),
                         Icon(Icons.star, color:Theme.of(context).primaryColor, size: 16.0),
-                        Icon(Icons.star, color:Theme.of(context).primaryColor, size: 16.0),
-                        Icon(Icons.star, color:Theme.of(context).primaryColor, size: 16.0),
+                        Icon(Icons.star, color:Theme.of(context).primaryColor, size: 16.0),*/
+                        SmoothStarRating(
+                         allowHalfRating: false,
+                          starCount: 5,
+                          rating: 3,
+                          size: 16.0,
+                          color: Colors.green,
+                          borderColor: Colors.green,
+                          spacing:0.0 
+                        ),
                         SizedBox(width: 10.0),
+
                         Text(
                           "("+widget.ratings.toString()+"Reviews)",
                           style: TextStyle(

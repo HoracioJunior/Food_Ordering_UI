@@ -17,7 +17,13 @@ class HomeTopInfo extends StatelessWidget {
                     Text("Faça o teu pedido!", style: textstyle)
                           ],
                       ),
-                    Icon(Icons.notifications_none, size: 40.0, color: Colors.blueAccent),
+                      IconButton(
+                      icon: Icon(Icons.notifications_none,size: 40.0, color: Colors.blueAccent), 
+                      onPressed: () {
+                        print("Notificacao");
+                      }
+                      ),
+                    //Icon(Icons.notifications_none, size: 40.0, color: Colors.blueAccent),
                   ],
                 ),
     );
