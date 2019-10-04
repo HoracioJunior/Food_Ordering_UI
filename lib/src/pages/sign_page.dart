@@ -181,6 +181,7 @@ class _SignInPageState extends State<SignInPage> {
                   darkMode: true,
                   text: "Google",
                 ),
+                SizedBox(width: 20,),
                 FacebookSignInButton(
                   onPressed: () {},
                   text: "Facebook",
