@@ -5,6 +5,7 @@ class OrderCard extends StatefulWidget {
 }
 
 class _OrderCardState extends State<OrderCard> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -28,20 +29,29 @@ class _OrderCardState extends State<OrderCard> {
                 child: Column(
                   children: <Widget>[
                     InkWell(
-                        onTap: () {},
-                        child: Icon(Icons.keyboard_arrow_up,
-                            color: Color(0xFFD3D3D3))),
+                        onTap: () {
+                          setState(() {
+                            counter++;
+                          });
+                        },
+                        child:
+                            Icon(Icons.keyboard_arrow_up, color: Colors.black)),
                     Text(
-                      "0",
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.grey
-                      ),
+                      "$counter",
+                      style:
+                          TextStyle(fontSize: 18.0, color: Colors.deepOrange),
                     ),
                     InkWell(
-                        onTap: () {},
-                        child: Icon(Icons.keyboard_arrow_down,
-                            color: Color(0xFFD3D3D3))),
+                      onTap: () {
+                        setState(() {
+                          counter--;
+                        });
+                      },
+                      child: Icon(
+                        Icons.keyboard_arrow_down,
+                        color: Colors.black,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -77,10 +87,10 @@ class _OrderCardState extends State<OrderCard> {
                 ),
                 SizedBox(height: 5.0),
                 Text(
-                  "\u023B 3.0",
+                  "MZN 123.0",
                   style: TextStyle(
                       fontSize: 16.0,
-                      color: Colors.orangeAccent,
+                      color: Colors.deepOrange,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 5.0),
@@ -92,14 +102,6 @@ class _OrderCardState extends State<OrderCard> {
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          Text(
-                            "Chicken",
-                            style: TextStyle(
-                            color: Color(0xFFD3D3D3),
-                            fontWeight: FontWeight.bold)),
-                          SizedBox(
-                            width: 5.0,
-                          ),
                           InkWell(
                             onTap: () {},
                             child: Text(
@@ -110,6 +112,13 @@ class _OrderCardState extends State<OrderCard> {
                               ),
                             ),
                           ),
+                          SizedBox(
+                            width: 5.0,
+                          ),
+                          Text("Chicken",
+                              style: TextStyle(
+                                  color: Color(0xFFD3D3D3),
+                                  fontWeight: FontWeight.bold)),
                           SizedBox(
                             width: 10.0,
                           ),
@@ -122,10 +131,10 @@ class _OrderCardState extends State<OrderCard> {
             ),
             Spacer(),
             GestureDetector(
-              onTap:(){},
+              onTap: () {},
               child: Icon(
                 Icons.cancel,
-                color: Colors.grey,
+                color: Colors.red,
               ),
             ),
           ],

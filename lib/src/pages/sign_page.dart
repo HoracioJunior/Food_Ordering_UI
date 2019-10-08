@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 import 'signup_page.dart';
 
@@ -11,7 +10,6 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
 
   bool _toggleVisibility = true;
-  bool _toggleConfirmVisibility = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

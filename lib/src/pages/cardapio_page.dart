@@ -53,6 +53,7 @@ class _CardapioPageState extends State<CardapioPage>{
           imagePath: food.imagePath,
           ratings: food.ratings,
           category: food.category,
+          details: food.details,
         ),
       );
     } 

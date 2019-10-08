@@ -6,7 +6,8 @@ final foods = [
       price: 120.0,
       category: "1",
       ratings: 30.0,
-      imagePath: "assets/images/breakfast.jpeg"
+      imagePath: "assets/images/breakfast.jpeg",
+      details: "Inclui Batata, Salada , blalalalala 1",
 
     ),
     Food(
@@ -16,6 +17,7 @@ final foods = [
     category: "2",
     price: 180.0,
     ratings: 69.0,
+    details: "Inclui Batata, Salada , blalalalala 2",
 
     ),
     Food(
@@ -25,6 +27,7 @@ final foods = [
     category: "2",
     price: 240.0,
     ratings: 69.0,
+    details: "Inclui Batata, Salada , blalalalala 3",
 
     ),
   ];

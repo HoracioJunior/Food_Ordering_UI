@@ -11,75 +11,6 @@ class _SignUpPageState extends State<SignUpPage> {
   bool _toggleVisibility = true;
   bool _toggleConfirmVisibility = true;
 
-  Widget _buildEmailTextField() {
-    return TextFormField(
-      decoration: InputDecoration(
-        hintText: "E-mail",
-        hintStyle: TextStyle(
-          color: Color(0xFFBDC2CB),
-          fontSize: 18.0,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildUsernameTextField() {
-    return TextFormField(
-      decoration: InputDecoration(
-        hintText: "Nome do Usuário",
-        hintStyle: TextStyle(
-          color: Color(0xFFBDC2CB),
-          fontSize: 18.0,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildPasswordTextField() {
-    return TextFormField(
-      decoration: InputDecoration(
-        hintText: "Palavra-passe",
-        hintStyle: TextStyle(
-          color: Color(0xFFBDC2CB),
-          fontSize: 18.0,
-        ),
-        suffixIcon: IconButton(
-          onPressed: () {
-            setState(() {
-              _toggleVisibility = !_toggleVisibility;
-            });
-          },
-          icon: _toggleVisibility
-              ? Icon(Icons.visibility_off)
-              : Icon(Icons.visibility),
-        ),
-      ),
-      obscureText: _toggleVisibility,
-    );
-  }
-
-  Widget _buildConfirmPasswordTextField() {
-    return TextFormField(
-      decoration: InputDecoration(
-        hintText: "Confirmar Palavra-passe",
-        hintStyle: TextStyle(
-          color: Color(0xFFBDC2CB),
-          fontSize: 18.0,
-        ),
-        suffixIcon: IconButton(
-          onPressed: () {
-            setState(() {
-              _toggleConfirmVisibility = !_toggleConfirmVisibility;
-            });
-          },
-          icon: _toggleConfirmVisibility
-              ? Icon(Icons.visibility_off)
-              : Icon(Icons.visibility),
-        ),
-      ),
-      obscureText: _toggleConfirmVisibility,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -240,15 +171,15 @@ class _SignUpPageState extends State<SignUpPage> {
                           suffixIcon: IconButton(
                               onPressed: () {
                                 setState(() {
-                                  _toggleVisibility = !_toggleVisibility;
+                                  _toggleConfirmVisibility = !_toggleConfirmVisibility;
                                 });
                               },
-                              icon: _toggleVisibility
+                              icon: _toggleConfirmVisibility
                                   ? Icon(Icons.visibility_off)
                                   : Icon(Icons.visibility),
                             ),
                         ),
-                         obscureText: _toggleVisibility,
+                         obscureText: _toggleConfirmVisibility,
                       ),
                     ),
                     SizedBox(height: 20,),

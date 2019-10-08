@@ -25,6 +25,7 @@ dependencies:
   flutter_auth_buttons: ^0.5.0
   image_picker: ^0.6.1+4
   animated_card: ^1.0.0+8
+  url_launcher: ^5.1.4
   flutter:
     sdk: flutter
 

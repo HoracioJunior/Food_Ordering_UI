@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:animated_card/animated_card.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 
@@ -146,6 +145,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         backgroundImage: AssetImage("assets/images/lunch.jpeg"),
                         radius: 70,
                         child: FloatingActionButton(
+                          onPressed: (){},
                           tooltip: 'Pick Image',
                           child: Icon(Icons.add_a_photo),
                         ),
@@ -222,6 +222,6 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
           ),
-        ));
+        ),);
   }
 }
