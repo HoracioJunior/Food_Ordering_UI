@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:badges/badges.dart';
 
 class HomeTopInfo extends StatelessWidget {
   final textstyle = TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.deepOrange);
@@ -17,11 +18,14 @@ class HomeTopInfo extends StatelessWidget {
                     Text("Faça o teu pedido!", style: textstyle)
                           ],
                       ),
-                      IconButton(
-                      icon: Icon(Icons.notifications_none,size: 40.0, color: Colors.blueAccent), 
-                      onPressed: () {
-                        print("Notificacao");
-                      }
+                      Badge(
+                        badgeContent: Text("2", style: TextStyle(color: Colors.white)),
+                          child: IconButton(
+                        icon: Icon(Icons.notifications_none,size: 40.0, color: Colors.blueAccent), 
+                        onPressed: () {
+                          print("Notificacao");
+                        }
+                        ),
                       ),
                     //Icon(Icons.notifications_none, size: 40.0, color: Colors.blueAccent),
                   ],

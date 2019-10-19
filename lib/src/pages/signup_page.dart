@@ -33,8 +33,8 @@ class _SignUpPageState extends State<SignUpPage> {
                     ],
                   ),
                   borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(65),
-                    bottomRight: Radius.circular(65),
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
                     
                   )
                 ),
@@ -76,7 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       height: 50,
                       padding: EdgeInsets.only(top: 4,bottom: 4,left: 16,right: 16),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(color: Colors.black26, blurRadius: 10.0)
@@ -96,7 +96,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       height: 50,
                       padding: EdgeInsets.only(top: 4,bottom: 4,left: 16,right: 16),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(color: Colors.black26, blurRadius: 10.0)
@@ -121,7 +121,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         right: 16
                       ),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(color: Colors.black26, blurRadius: 10.0)
@@ -157,7 +157,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         right: 16
                       ),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(color: Colors.black26, blurRadius: 10.0)
@@ -195,7 +195,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               Colors.deepOrangeAccent,
                               ],
                             ),
-                            borderRadius: BorderRadius.circular(50)
+                            borderRadius: BorderRadius.circular(5)
                          ),
                          child: Center(
                            child: Text("Cadastrar-se".toUpperCase(),
